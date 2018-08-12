@@ -295,6 +295,13 @@
             "event": "riku1227:onAgreement",
             "target": "self"
           }
+        },
+        "minecraft:behavior.tempt": {
+          "priority": 4,
+          "speed_multiplier": 0.4,
+          "items": [
+            "cake"
+          ]
         }
       },
 
