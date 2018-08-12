@@ -151,7 +151,7 @@
           "family":[ "villager", "librarian" ]          
         },
         "minecraft:variant": {
-          "value": 1
+          "value": 0
         },
 
         "minecraft:trade_table": {
@@ -165,7 +165,7 @@
           "family":[ "villager", "cartographer" ]          
         },
         "minecraft:variant": {
-          "value": 1
+          "value": 0
         },
 
         "minecraft:trade_table": {
@@ -179,7 +179,7 @@
           "family":[ "villager", "priest", "cleric" ]          
         },
         "minecraft:variant": {
-          "value": 2
+          "value": 0
         },
 
         "minecraft:trade_table": {
@@ -193,7 +193,7 @@
           "family":[ "villager", "blacksmith", "armorer" ]          
         },
         "minecraft:variant": {
-          "value": 3
+          "value": 0
         },
 
         "minecraft:trade_table": {
@@ -207,7 +207,7 @@
           "family":[ "villager", "blacksmith", "weaponsmith" ]          
         },
         "minecraft:variant": {
-          "value": 3
+          "value": 0
         },
         
         "minecraft:trade_table": {
@@ -221,7 +221,7 @@
           "family":[ "villager", "blacksmith", "toolsmith" ]          
         },
         "minecraft:variant": {
-          "value": 3
+          "value": 0
         },
         
         "minecraft:trade_table": {
@@ -235,7 +235,7 @@
           "family":[ "villager", "artisan", "butcher" ]          
         },
         "minecraft:variant": {
-          "value": 4
+          "value": 0
         },
 
         "minecraft:trade_table": {
@@ -249,7 +249,7 @@
           "family":[ "villager", "artisan", "leatherworker" ]          
         },
         "minecraft:variant": {
-          "value": 4
+          "value": 0
         },
         
         "minecraft:trade_table": {
