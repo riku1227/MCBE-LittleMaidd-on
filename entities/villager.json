@@ -783,7 +783,7 @@
       },
 
       "riku1227:onAgreement": {
-        "remove": { "component_groups": [ "adult" ] },
+        "remove": { "component_groups": [ "adult", "farmer", "fisherman", "shepherd", "fletcher", "librarian", "cartographer", "cleric", "armorer", "weaponsmith", "toolsmith", "butcher", "leatherworker" ] },
         "add": { "component_groups": [ "riku1227:maid_normal" ] }
       }
     }
