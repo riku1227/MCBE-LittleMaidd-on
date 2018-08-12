@@ -1,0 +1,23 @@
+{
+    "format_version": 1,
+    "header": {
+        "description": "littleMaidMob for Minecraft: Bedrock Editon",
+        "name": "LittleMaidd-on",
+        "uuid": "dd428202-b7b9-4f1e-ad96-c9ea79b27b9c",
+        "version": [0, 0, 1]
+    },
+    "modules": [
+        {
+            "description": "littleMaidMob for Minecraft: Bedrock Editon",
+            "type": "data",
+            "uuid": "fa6e90c8-c925-460f-8155-c8a60b753caa",
+            "version": [0, 0, 1]
+        }
+    ],
+    "dependencies": [
+        {
+            "uuid": "2776fd8b-922e-4bf6-8eab-2c40f97ee425",
+            "version": [1, 1, 0]
+        }
+    ]
+}
