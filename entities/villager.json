@@ -309,6 +309,14 @@
       "riku1227:maid_normal": {
         "minecraft:variant": {
           "value": 1
+        },
+        "minecraft:is_tamed": {
+        },
+        "minecraft:behavior.follow_owner": {
+          "priority": 6,
+          "speed_multiplier": 0.6,
+          "start_distance": 4,
+          "stop_distance": 2
         }
       }
     },
