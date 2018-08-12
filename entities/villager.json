@@ -285,6 +285,23 @@
         },
         "minecraft:behavior.receive_love":{
           "priority": 7
+        },
+
+        /* Add */
+        "minecraft:tameable": {
+          "probability": 1,
+          "tameItems": "cake",
+          "tame_event": {
+            "event": "riku1227:onAgreement",
+            "target": "self"
+          }
+        }
+      },
+
+      /* Add */
+      "riku1227:maid_normal": {
+        "minecraft:variant": {
+          "value": 1
         }
       }
     },
@@ -763,6 +780,11 @@
       "minecraft:become_cleric": {
         "add": { "component_groups": [ "cleric", "adult", "behavior_non_peasant" ] },
         "remove": { "component_groups": [ "baby" ] }
+      },
+
+      "riku1227:onAgreement": {
+        "remove": { "component_groups": [ "adult" ] },
+        "add": { "component_groups": [ "riku1227:maid_normal" ] }
       }
     }
   }
