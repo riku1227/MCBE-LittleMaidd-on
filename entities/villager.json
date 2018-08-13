@@ -302,6 +302,11 @@
           "items": [
             "cake"
           ]
+        },
+        "minecraft:inventory": {
+          "inventory_size": 8,
+          "container_type": "horse",
+          "private": true
         }
       },
 
@@ -317,6 +322,13 @@
           "speed_multiplier": 0.6,
           "start_distance": 4,
           "stop_distance": 2
+        },
+        "minecraft:inventory": {
+          "inventory_size": 18,
+          "container_type": "horse",
+          "private": false
+        },
+        "minecraft:is_chested": {
         }
       }
     },
@@ -358,10 +370,6 @@
       "minecraft:jump.static": {
       },
       "minecraft:can_climb": {
-      },
-      "minecraft:inventory": {
-        "inventory_size": 8,
-        "private": true
       },
       "minecraft:damage_sensor": [
         {
