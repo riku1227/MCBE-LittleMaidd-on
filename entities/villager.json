@@ -317,12 +317,6 @@
         },
         "minecraft:is_tamed": {
         },
-        "minecraft:behavior.follow_owner": {
-          "priority": 6,
-          "speed_multiplier": 0.6,
-          "start_distance": 4,
-          "stop_distance": 2
-        },
         "minecraft:inventory": {
           "inventory_size": 18,
           "container_type": "horse",
@@ -330,6 +324,52 @@
         },
         "minecraft:is_chested": {
         }
+      },
+      
+      "riku1227:walking": {
+        "minecraft:behavior.follow_owner": {
+          "priority": 6,
+          "speed_multiplier": 0.6,
+          "start_distance": 4,
+          "stop_distance": 2
+        },
+        "minecraft:movement": {
+          "value": 0.5
+        },
+        "minecraft:interact": [
+          {
+            "filters": {
+              "all_of": [
+                { "test": "has_equipment", "subject": "other", "domain": "hand", "value": "stick"},
+                { "test": "is_owner", "subject": "self", "operator": "equals", "value": "true" }
+              ]
+            },
+            "use_item": false,
+            "interact_text": "待機させる",
+            "event": "riku1227:setEnableWaiting",
+            "target": "self"
+          }
+        ]
+      },
+      
+      "riku1227:waiting": {
+        "minecraft:movement": {
+          "value": 0
+        },
+        "minecraft:interact": [
+          {
+            "filters": {
+              "all_of": [
+                { "test": "has_equipment", "subject": "other", "domain": "hand", "value": "stick"},
+                { "test": "is_owner", "subject": "self", "operator": "equals", "value": "true" }
+              ]
+            },
+            "use_item": false,
+            "interact_text": "待機を解除する",
+            "event": "riku1227:setEnableWalking",
+            "target": "self"
+          }
+        ]
       }
     },
 
@@ -807,7 +847,17 @@
 
       "riku1227:onAgreement": {
         "remove": { "component_groups": [ "adult", "farmer", "fisherman", "shepherd", "fletcher", "librarian", "cartographer", "cleric", "armorer", "weaponsmith", "toolsmith", "butcher", "leatherworker" ] },
-        "add": { "component_groups": [ "riku1227:maid_normal" ] }
+        "add": { "component_groups": [ "riku1227:maid_normal", "riku1227:walking" ] }
+      },
+      
+      "riku1227:setEnableWaiting": {
+        "remove": { "component_groups": [ "riku1227:walking" ] },
+        "add": { "component_groups": [ "riku1227:waiting" ] }
+      },
+      
+      "riku1227:setEnableWalking": {
+        "remove": { "component_groups": [ "riku1227:waiting" ] },
+        "add": { "component_groups": [ "riku1227:walking" ] }
       }
     }
   }
