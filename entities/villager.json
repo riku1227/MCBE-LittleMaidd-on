@@ -327,6 +327,24 @@
       },
       
       "riku1227:walking": {
+        "minecraft:attack": {
+          "damage": 4
+        },
+        "minecraft:behavior.melee_attack": {
+          "priority": 1,
+          "target_dist": 2.7,
+          "track_target": true,
+          "reach_multiplier": 1.2,
+          "speed_multiplier": 0.65
+        },
+        "minecraft:behavior.owner_hurt_target": {
+          "priority": 2
+        },
+        "minecraft:behavior.nearest_attackable_target": {
+          "priority": 1,
+          "attack_interval": 10,
+          "must_see": true
+        },
         "minecraft:behavior.follow_owner": {
           "priority": 6,
           "speed_multiplier": 0.6,
