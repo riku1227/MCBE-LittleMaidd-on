@@ -276,6 +276,25 @@
         "minecraft:behavior.play": {
           "priority": 8,
           "speed_multiplier": 0.32
+        },
+        "minecraft:behavior.avoid_mob_type": {
+          "priority": 3,
+          "entity_types": [
+            {
+              "filters": { 
+                  "any_of": [
+                    { "test" : "is_family", "subject" : "other", "value" : "zombie"},
+                    { "test" : "is_family", "subject" : "other", "value" : "zombie_villager"},
+                    { "test" : "is_family", "subject" : "other", "value" : "zombie_pigman"},
+                    { "test" : "is_family", "subject" : "other", "value" : "illager"},
+            { "test" : "is_family", "subject" : "other", "value" : "vex"}
+                  ]
+              },
+              "max_dist": 8,
+              "walk_speed_multiplier": 0.6,
+              "sprint_speed_multiplier": 0.6
+            }
+          ]
         }
       },
 
@@ -285,6 +304,25 @@
         },
         "minecraft:behavior.receive_love":{
           "priority": 7
+        },
+        "minecraft:behavior.avoid_mob_type": {
+          "priority": 3,
+          "entity_types": [
+            {
+              "filters": { 
+                  "any_of": [
+                    { "test" : "is_family", "subject" : "other", "value" : "zombie"},
+                    { "test" : "is_family", "subject" : "other", "value" : "zombie_villager"},
+                    { "test" : "is_family", "subject" : "other", "value" : "zombie_pigman"},
+                    { "test" : "is_family", "subject" : "other", "value" : "illager"},
+            { "test" : "is_family", "subject" : "other", "value" : "vex"}
+                  ]
+              },
+              "max_dist": 8,
+              "walk_speed_multiplier": 0.6,
+              "sprint_speed_multiplier": 0.6
+            }
+          ]
         },
 
         /* Add */
@@ -487,25 +525,6 @@
       "minecraft:behavior.panic": {
         "priority": 3,
         "speed_multiplier": 0.6
-      },
-      "minecraft:behavior.avoid_mob_type": {
-        "priority": 3,
-        "entity_types": [
-          {
-            "filters": { 
-                "any_of": [
-                  { "test" : "is_family", "subject" : "other", "value" : "zombie"},
-                  { "test" : "is_family", "subject" : "other", "value" : "zombie_villager"},
-                  { "test" : "is_family", "subject" : "other", "value" : "zombie_pigman"},
-                  { "test" : "is_family", "subject" : "other", "value" : "illager"},
-				  { "test" : "is_family", "subject" : "other", "value" : "vex"}
-                ]
-            },
-            "max_dist": 8,
-            "walk_speed_multiplier": 0.6,
-            "sprint_speed_multiplier": 0.6
-          }
-        ]
       },
       "minecraft:behavior.move_indoors": {
         "priority": 4,
