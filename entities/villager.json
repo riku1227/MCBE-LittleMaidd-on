@@ -362,8 +362,13 @@
                 { "test": "is_owner", "subject": "self", "operator": "equals", "value": "true" }
               ]
             },
-            "use_item": false,
             "interact_text": "待機させる",
+            "particle_on_start": {
+              "particle_offset_towards_interactor": true,
+              "particle_type": "note",
+              "particle_y_offset": 0
+            },
+            "use_item": false,
             "event": "riku1227:setEnableWaiting",
             "target": "self"
           }
@@ -382,8 +387,13 @@
                 { "test": "is_owner", "subject": "self", "operator": "equals", "value": "true" }
               ]
             },
-            "use_item": false,
             "interact_text": "待機を解除する",
+            "particle_on_start": {
+              "particle_offset_towards_interactor": true,
+              "particle_type": "note",
+              "particle_y_offset": 0
+            },
+            "use_item": false,
             "event": "riku1227:setEnableWalking",
             "target": "self"
           }
