@@ -323,6 +323,18 @@
           "private": false
         },
         "minecraft:is_chested": {
+        },
+        "minecraft:healable": {
+          "items": [
+            {
+              "item": "sugar",
+              "heal_amount": 1
+            },
+            {
+              "item": "cake",
+              "heal_amount": 20
+            }
+          ]
         }
       },
       
