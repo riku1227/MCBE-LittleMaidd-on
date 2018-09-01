@@ -377,32 +377,14 @@
       },
       
       "riku1227:walking": {
-        "minecraft:attack": {
-          "damage": 4
-        },
-        "minecraft:behavior.melee_attack": {
-          "priority": 1,
-          "target_dist": 2.7,
-          "track_target": true,
-          "reach_multiplier": 1.2,
-          "speed_multiplier": 0.65
-        },
-        "minecraft:behavior.owner_hurt_target": {
-          "priority": 2
-        },
-        "minecraft:behavior.nearest_attackable_target": {
-          "priority": 1,
-          "attack_interval": 10,
-          "must_see": true
+        "minecraft:movement": {
+          "value": 0.5
         },
         "minecraft:behavior.follow_owner": {
           "priority": 6,
           "speed_multiplier": 0.6,
           "start_distance": 4,
           "stop_distance": 2
-        },
-        "minecraft:movement": {
-          "value": 0.5
         },
         "minecraft:interact": [
           {
@@ -420,6 +402,23 @@
             },
             "use_item": false,
             "event": "riku1227:setEnableWaiting",
+            "target": "self"
+          },
+          {
+            "filters": {
+              "all_of": [
+                { "test": "has_equipment", "subject": "other", "domain": "hand", "value": "wooden_sword"},
+                { "test": "is_owner", "subject": "self", "operator": "equals", "value": "true" }
+              ]
+            },
+            "interact_text": "護衛させる(攻撃力4)",
+            "particle_on_start": {
+              "particle_offset_towards_interactor": true,
+              "particle_type": "note",
+              "particle_y_offset": 0
+            },
+            "use_item": true,
+            "event": "riku1227:setFencer1",
             "target": "self"
           }
         ]
@@ -444,10 +443,31 @@
               "particle_y_offset": 0
             },
             "use_item": false,
-            "event": "riku1227:setEnableWalking",
+            "event": "riku1227:setEnableWaiting",
             "target": "self"
           }
         ]
+      },
+
+      "riku1227:fencer": {
+        "minecraft:attack": {
+          "damage": 4
+        },
+        "minecraft:behavior.melee_attack": {
+          "priority": 1,
+          "target_dist": 2.7,
+          "track_target": true,
+          "reach_multiplier": 1.2,
+          "speed_multiplier": 0.65
+        },
+        "minecraft:behavior.owner_hurt_target": {
+          "priority": 2
+        },
+        "minecraft:behavior.nearest_attackable_target": {
+          "priority": 1,
+          "attack_interval": 10,
+          "must_see": true
+        }
       }
     },
 
@@ -917,6 +937,10 @@
       "riku1227:setEnableWalking": {
         "remove": { "component_groups": [ "riku1227:waiting" ] },
         "add": { "component_groups": [ "riku1227:walking" ] }
+      },
+
+      "riku1227:setFencer1": {
+        "add": { "component_groups": [ "riku1227:fencer" ] }
       }
     }
   }
